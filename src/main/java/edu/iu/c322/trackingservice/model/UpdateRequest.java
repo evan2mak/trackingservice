@@ -1,9 +1,9 @@
-package edu.iu.c322.orderservice.model;
+package edu.iu.c322.trackingservice.model;
 
 public class UpdateRequest {
     private int orderId;
     private int itemId;
-    private String reason;
+    private String status;
 
     public int getOrderId() {
         return orderId;
@@ -21,11 +21,11 @@ public class UpdateRequest {
         this.itemId = itemId;
     }
 
-    public String getReason() {
-        return reason;
+    public String getStatus() {
+        return status;
     }
 
-    public void setReason(String reason) {
-        this.reason = reason;
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

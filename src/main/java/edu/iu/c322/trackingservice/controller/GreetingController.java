@@ -1,4 +1,4 @@
-package edu.iu.c322.invoicingservice.controller;
+package edu.iu.c322.trackingservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
