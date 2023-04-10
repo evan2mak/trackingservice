@@ -1,22 +1,33 @@
 package edu.iu.c322.trackingservice.model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 import java.util.Objects;
 
+@Entity
 public class TrackingStatus {
-    private String status;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int trackingStatusId;
+    private String trackingStatus;
     private String date;
 
-    public TrackingStatus(String status, String date) {
-        this.status = status;
+    public TrackingStatus(String trackingStatus, String date) {
+        this.trackingStatus = trackingStatus;
         this.date = date;
     }
 
-    public String getStatus() {
-        return status;
+    public TrackingStatus() {
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public String getTrackingStatus() {
+        return trackingStatus;
+    }
+
+    public void setTrackingStatus(String trackingStatus) {
+        this.trackingStatus = trackingStatus;
     }
 
     public String getDate() {
@@ -31,11 +42,11 @@ public class TrackingStatus {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof TrackingStatus that)) return false;
-        return Objects.equals(getStatus(), that.getStatus()) && Objects.equals(getDate(), that.getDate());
+        return Objects.equals(getTrackingStatus(), that.getTrackingStatus()) && Objects.equals(getDate(), that.getDate());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getStatus(), getDate());
+        return Objects.hash(getTrackingStatus(), getDate());
     }
 }

@@ -3,7 +3,7 @@ package edu.iu.c322.trackingservice.model;
 public class UpdateRequest {
     private int orderId;
     private int itemId;
-    private String status;
+    private TrackingStatus trackingStatus;
 
     public int getOrderId() {
         return orderId;
@@ -21,11 +21,11 @@ public class UpdateRequest {
         this.itemId = itemId;
     }
 
-    public String getStatus() {
-        return status;
+    public TrackingStatus getTrackingStatus() {
+        return trackingStatus;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setTrackingStatus(TrackingStatus trackingStatus) {
+        this.trackingStatus = trackingStatus;
     }
 }
